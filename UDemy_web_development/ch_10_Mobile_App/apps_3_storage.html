@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="app.min.css">
+      <style>
+          
+          
+			
+      </style>
+  </head>
+
+  <body>    
+      
+      
+      
+    <script src ="zepto.js"></script>
+    <script type ="text/javascript">
+    
+        
+        // determining local storage capability
+        /*
+        if(typeof(Storage) !== "undefined"){
+            alert("local storage is a go");
+        } else{
+            alert("local storage needs an upgraded browser");
+        }
+        */
+        
+        //basically permanent storage in apps
+        if(typeof(Storage) !== "undefined"){
+            // localStorage.setItem("name", "Timothy")
+            //alert(localStorage.getItem("name"));
+            
+            var names =[];
+            /*
+            names[0] = prompt("New member name?");
+            localStorage.setItem("names", JSON.stringify(names));
+            */
+            var storedNames = JSON.parse(localStorage.getItem("names"));
+            
+            alert(names[0]);
+            alert(storedNames[0]);
+            
+        } else{
+            alert("local storage needs an upgraded browser");
+            
+        }
+        
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fonts demo</title>
+        <meta charset="UTF-8" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">
+        
+        <style type ="text/css">
+            
+            .big-font{
+                font-size:100px;
+                font-family:cursive  sans-serif fantasy;
+            }
+            h1{
+                font-family:'Carrois Gothic', Arial, Times, cursive;
+            }
+            .bold{
+                font-weight:bold;
+            }
+            .italic{
+                font-style:italic;
+            }
+            .underline{
+                text-decoration:underline;
+            }
+            a{
+                text-decoration:none;
+            }
+            a:hover{
+                text-decoration:underline;
+                color:green;
+            }
+            .big{
+                font-size:200%;
+            }
+            .right{
+                text-align:right;
+                width:300px;
+                height:100px;
+                background-color:forestgreen;
+                padding:20px;
+            }
+            .centered{
+                text-align:center !important;
+            }
+            .justified{
+                text-align:justify;
+                width:300px;
+                height:200px;
+                background-color:skyblue;
+                padding:20px;
+            }
+        
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <p class ="right">This text moves right</p>
+        <p class ="centered">This text is centered on the page</p>
+        <div>
+            
+            <p class ="justified"><span class ="centered">THis is centered</span><br>Lorem ipsum dolor sit amet, lorem graeci epicuri ut pri. An eos veritus ceteros singulis, eam et epicurei perfecto prodesset. Te vix commodo eligendi democritum. At qui natum postea accumsan. Id sit oblique imperdiet, vero possim integre pri eu, in doctus signiferumque mei. Fuisset partiendo iracundia mei cu, appareat apeirian corrumpit eu ius. Discere pericula molestiae mea an, altera corpora eloquentiam ut per.</p>
+        </div>
+        
+        <div>
+            <h1>title</h1>
+            <h2 class ="bold">bold text</h2>
+            <p class ="italic">this is italic</p>
+
+            <p class ="big-font"> this is some text</p>
+            <p class ="italic">This it some italic text. <span class="bold">This text is both itlaic and bold.</span></p>
+            <p class ="underline">this tet is underlined</p>
+
+            <a href="#">This is a non-underlined link.</a>
+            <p class ="big">this text is big</p>
+        </div>
+    </body>
+
+</html>

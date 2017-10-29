@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8"/>
+        
+        <style type ="text/css">
+            .circle {
+                height:100px;
+                width:100px;
+                border-radius:100%;
+                float:left;
+                margin:30px;
+            }
+            #circle1{
+                background-color:red;
+            }
+            #circle2{
+                background-color:green;
+            }
+            #circle3{
+                background-color:blue;
+            }
+            .text{
+                position:relative;
+                top:40px;
+                left:20px;
+                color:white;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <div class ="circle" id ="circle1"><span class ="text">Click me</span></div>
+        <div class ="circle" id ="circle2"><span class ="text">Click me</span></div>
+        <div class ="circle" id ="circle3"><span class ="text">Click me</span></div>
+        
+        <script type ="text/javascript">
+        
+            document.getElementById('circle1').onclick=function(){
+                document.getElementById('circle1').style.display="none";
+            };
+            document.getElementById('circle2').onclick=function(){
+                document.getElementById('circle2').style.display="none";
+            };
+            document.getElementById('circle3').onclick=function(){
+                document.getElementById('circle3').style.display="none";
+            };
+        
+        </script>
+    
+    </body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="jquery-3.2.1.min.js"></script> 
+        <style type ="text/css">
+        
+            .sections{
+                width:100px;
+                height:100px;
+                margin:10px;
+                float:left;
+            }
+            #green-circle{
+                background-color:green;
+                border-radius:50%;
+            }
+            .red-square{
+                background-color:red;
+            }
+            #p1{
+                display:block;
+            }
+            #p2{
+                clear:both;
+            }
+            #hidden{
+                display:none;
+            }
+            #toggle{
+                clear:both;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class ="sections" id="green-circle"></div>
+        <div class ="sections red-square"></div>
+        <div class ="sections red-square"></div>
+
+        
+        <p id ="p1">Here are some neat shapes</p>
+        <button id ="myButton">Change is coming.</button>
+        <p id ="hidden">This text was hidden</p>
+        
+        <p id ="p2">this text can fade in and out.</p>
+        <button id ="toggle">Toggle text</button>
+        
+        
+        
+        <script type ="text/javascript">
+        
+            /*
+            $("#green-circle").click(function(){
+                $(this).hide();
+            });
+            
+            */
+            
+            $('#hidden').hide();
+            
+            $('div').click(function(){
+                $(this).fadeOut("slow", function(){
+                    alert("fade out complete");                
+                });
+            });
+            
+            
+            $("#myButton").click(function(){
+                $("#p1").fadeOut("slow"); 
+                $("#hidden").fadeIn();
+            });
+            
+            // best way to toggle, uses least code
+            
+            $("#toggle").click(function(){
+                $("#p2").fadeToggle();
+            });
+            
+            // or can toggle with if statement in case the toggle property doesn't exist for a method.
+            
+            $("#toggle").click(function(){
+                if ($("#p2").css("display") =="none"){
+                    $("#p2").fadeIn();
+                } else {
+                    $("#p2").fadeOut();
+                }
+            });
+            
+            // third way using a variable in case neither of the above is available 
+            
+            var textShowing =true;
+            
+            $("#toggle").click(function(){
+                if(textShowing){
+                    $("#p2").fadeOut(function(){
+                        textShowing=false;
+                    });
+                } else {
+                    $("#p2").fadeIn(function(){
+                        textShowing=true;
+                    });
+                }
+                
+            });
+            
+        </script>
+    
+    </body>
+
+</html>

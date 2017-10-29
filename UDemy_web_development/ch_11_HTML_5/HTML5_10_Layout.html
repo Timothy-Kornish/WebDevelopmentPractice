@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Transformations</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        
+        <style type ="text/css">
+            
+            #multi-column{
+                column-count:3;
+                -webkit-column-count:3;
+                -moz-column-count:3;
+                
+                column-gap:40px;
+                -webkit-column-gap:40px;
+                -moz-column-gap:40px;
+                
+                column-rule-style:dashed;
+                -webkit-column-rule-style:solid;
+                -moz-column-rule-style:solid;
+                
+                column-rule-width:thin;
+                -webkit-column-rule-width:1px;
+                -moz-column-rule-width:thin;
+                
+                column-rule-color:grey;
+                -webkit-column-rule-color:grey;
+                -moz-column-rule-color:grey;
+            }
+            h2{
+                column-span:all;
+                -webkit-column-span:all;
+            }
+            header{
+                width:100%;
+                height:50px;
+                background-color:grey;
+            }
+            body{
+                margin:0;
+            }
+            #container{
+                width:100%;
+                background-color:yellow;
+                height: -webkit-calc(100%-50px);
+                height:calc(100%-50px);
+                position:absolute;
+            }
+            .flexbox-container{
+                display:flex;
+                display: -webkit-flex;
+                width:100%;
+                height:400px;
+                background-color:aqua;
+                flex-direction:row-reverse;
+                -webkit-flex-direction: row-reverse;
+                flex-direction:column;
+                flex-direction:column-reverse;
+                flex-wrap:wrap;
+                -webkit-flex-wrap:wrap;
+                
+            }
+            .flexbox-item{
+                background-color:bisque;
+                width:100px;
+                height:100px;
+                margin:10px;
+                box-sizing:border-box; 
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        <header></header>
+        <div id="container">
+            
+            <div class="flexbox-container">
+                <div class="flexbox-item">Item 1</div>
+                <div class="flexbox-item" style="border:5px solid grey; padding:10px">Item 2</div>
+                <div class="flexbox-item">Item 3</div>
+                <div class="flexbox-item">Item 4</div>
+                <div class="flexbox-item">Item 5</div>
+                <div class="flexbox-item">Item 6</div>
+                <div class="flexbox-item">Item 7</div>
+                <div class="flexbox-item">Item 8</div>
+                <div class="flexbox-item">Item 9</div>
+            </div>
+            
+        </div>
+        <div id ="multi-column">
+            
+            <h2>News for Nerds</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis in eros id vulputate. Sed eu consequat neque, in faucibus arcu. Praesent sem eros, feugiat ac ultricies nec, semper cursus massa. Nulla rhoncus, felis eu hendrerit convallis, sem orci aliquam magna, id dictum dui ex at arcu. Cras tristique orci sed aliquam ornare. Mauris tincidunt erat lectus, nec imperdiet mauris dictum id. Donec accumsan risus ac placerat tincidunt. Ut eu turpis ut odio fermentum blandit a vel velit. Vestibulum convallis nec mauris a cursus. Nunc vel bibendum risus. Aenean sollicitudin ornare lorem dictum eleifend. Praesent lacinia leo in lectus vulputate, non efficitur purus fermentum. Duis in urna commodo, semper velit eget, scelerisque quam. Mauris ligula velit, sodales eu turpis sed, luctus porta erat. Suspendisse potenti.<br><br>
+
+Aenean iaculis lectus iaculis magna egestas, ut pretium ligula luctus. Integer fringilla diam eu pharetra molestie. Curabitur vehicula felis eleifend elit pulvinar eleifend. Donec ut quam pretium, porttitor quam rhoncus, lobortis urna. Fusce ut elit cursus, vestibulum nisl sed, consectetur purus. Fusce porta congue sem ac ullamcorper. Vestibulum in aliquet nunc, vitae porta sapien. Aenean rhoncus justo vitae porttitor rhoncus. Aliquam non tempus est, vitae dapibus arcu. Quisque risus dui, malesuada lobortis fermentum viverra, fermentum a odio. Donec et felis nisi. Morbi sagittis vehicula augue, at ullamcorper orci semper eget.<br><br>
+
+Vestibulum sed libero nunc. Quisque id ipsum congue, gravida odio at, posuere turpis. Phasellus tincidunt est quis porta sagittis. Mauris suscipit rhoncus efficitur. Quisque eu laoreet justo, at ullamcorper est. Fusce ac euismod velit. Maecenas vel pulvinar sapien, eu fermentum lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In nulla urna, commodo ut auctor non, ornare a orci. Maecenas eget egestas urna. Sed a semper arcu.<br><br>
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce dictum quis nisl at accumsan. Mauris varius eu metus egestas tempor. Proin mattis aliquet massa sit amet tincidunt. Nullam eros ipsum, tincidunt ut est commodo, suscipit auctor arcu. Sed cursus elit at auctor euismod. Phasellus eget augue lobortis, vestibulum justo eget, consequat metus.<br><br>
+
+Nam sagittis arcu pretium mi pharetra faucibus. Aenean vel massa rutrum, pellentesque nulla vel, lacinia leo. Sed lacinia fermentum dui, a vulputate libero suscipit nec. Sed porta tortor viverra urna pellentesque, eu pulvinar enim sollicitudin. Ut lorem nibh, ultrices id neque at, vestibulum laoreet est. Pellentesque egestas nibh sagittis mauris fermentum fringilla. Sed leo dolor, elementum vel facilisis in, feugiat dapibus mi. Vivamus sit amet leo porta, fermentum nulla quis, cursus mauris. Maecenas interdum, nisi vel ullamcorper tristique, neque quam accumsan eros, et blandit sapien diam feugiat dui. Suspendisse sit amet accumsan turpis. Nam suscipit eros leo, imperdiet rutrum nunc sodales eget. Vivamus malesuada pellentesque blandit. Ut finibus, nulla eu interdum gravida, ipsum purus interdum metus, sit amet condimentum turpis ligula vitae justo. Aenean tincidunt consequat ipsum quis faucibus. Phasellus in mauris a purus ullamcorper venenatis vitae vehicula sapien. Sed sollicitudin euismod mauris, id venenatis dui convallis vel.
+
+</div>
+        
+    
+    </body>
+
+</html>

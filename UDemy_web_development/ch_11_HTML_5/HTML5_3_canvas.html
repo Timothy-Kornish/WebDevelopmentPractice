@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML 5 and CSS 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        
+        <style type="text/css">
+            #myCanvas{
+                border:1px solid grey;
+            }
+            #myCanvas2{
+                border:1px solid grey;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <canvas id ="myCanvas" width="500" height="400">
+        
+        </canvas>
+        
+        <canvas id ="myCanvas2" width="500" height="400">
+        
+        </canvas>
+        
+        <script type="text/javascript">
+            
+            var myCanvas = document.getElementById("myCanvas");
+            var context = myCanvas.getContext("2d");
+            
+            
+            
+            context.fillStyle = "#49C900";
+            context.fillRect(0,200,50,50);
+            
+            context.moveTo(0,400);
+            context.lineTo(500,0);
+            context.lineWidth=20;
+            context.strokeStyle="#F42924";
+            context.stroke();
+            
+            
+            var myCanvas2 = document.getElementById("myCanvas2");
+            var context2 = myCanvas2.getContext("2d");
+            
+            var gradient = context2.createLinearGradient(150,100,350,300);
+            gradient.addColorStop(0,"white");
+            gradient.addColorStop(1,"#49C900");
+            
+            context2.fillStyle = gradient;
+            context2.fillRect(150,100,200,200);
+            
+            context2.moveTo(150,100);
+            context2.lineTo(350,300);
+            
+            context2.moveTo(150,300);
+            context2.lineTo(350,100);
+            //context2.lineWidth=2;
+            context2.strokeStyle="#F42924";
+            context2.stroke();
+            
+            context2.beginPath();
+            context2.arc(100,100,50,0,2*Math.PI); // (center x, center y, radius, start-position, end-position)
+            context2.stroke();
+            
+            context2.beginPath();
+            context2.arc(75,75,50,Math.PI,2*Math.PI*3/4); // (center x, center y, radius, start-position, end-position)
+            context2.stroke();
+            
+            var gradient2 = context2.createLinearGradient(200,50,300,75);
+            gradient2.addColorStop(0,"red");
+            gradient2.addColorStop(1,"green");
+            
+            context2.fillStyle =gradient2;
+            context2.font="20px Arial";
+            context2.fillText("My Canvas",200,50);
+            
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="jquery-3.2.1.min.js"></script> 
+        <style type ="text/css">
+        
+            .sections{
+                width:100px;
+                height:100px;
+                margin:10px;
+                float:left;
+            }
+            #green-circle{
+                background-color:green;
+                border-radius:50%;
+            }
+            .red-square{
+                background-color:red;
+            }
+            #p1{
+                
+            }
+            #p2{
+
+            }
+        
+        </style>
+    </head>
+    <body>
+    
+        <div class ="sections" id="green-circle"></div>
+        <div class ="sections red-square"></div>
+        <div class ="sections red-square"></div>
+        <p id ="p1">Here are some neat shapes</p>
+        
+        
+        
+        
+        <script type ="text/javascript">
+        
+            
+            $('#green-circle').click(function (){
+               
+                $("#green-circle").css("width","200px");
+                $("#green-circle").css("height","200px");
+                $("body").css("background-color", "grey");
+                alert($("#green-circle").css("background-color"));
+                alert($("body").css("width"));
+            });
+            
+            $('div').click(function(){
+                $(this).css("display", "none");
+                if ($(this).attr("id") =="green-circle"){
+                    alert("You clicked on a circle");
+                } else{
+                    alert("you clicked on a square");
+                }
+            });
+            
+            
+            
+        </script>
+    
+    </body>
+
+</html>

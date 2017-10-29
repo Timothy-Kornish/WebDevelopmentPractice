@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="jquery-3.2.1.min.js"></script> 
+        
+    </head>
+    <body>
+        <p></p>
+        <script type ="text/javascript">
+            
+            $.ajax("info.txt").done(function(data){
+                $("p").html(data);
+            }).fail(function(){
+                alert("could not get data");
+            });
+            
+            /*
+            $.get("info.txt", function(data){
+                alert(data);
+            });
+            */
+        </script>
+    
+    </body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Funcitons</title>
+    </head>
+    <body>
+        <p>How many fingers are you holding up?</p>
+       <!-- 
+        <input type ="text" id ="fingers" placeholder="number of fingers"> 
+        -->
+        
+        
+        <select id ="fingers">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        
+        <button id ="myButton">Enter</button>
+        
+        <script type ="text/javascript">
+            function alertMe(){
+                alert("Hi there Timothy");
+            }
+            function average(a,b){
+                return ((a+b)/2);
+            }
+            var x =10;
+            var y =20;
+            alert("The average of "+x+" and "+y+" is: "+ average(x,y));
+            
+            
+            function doAGuess(correctAnswer){
+                var guess =Math.floor(Math.random()*6);
+                
+                 if (guess == correctAnswer){
+                      return true;
+                }
+                else{
+                    return false; 
+                }
+            }
+            document.getElementById("myButton").onclick = function(){
+                var myNumber = document.getElementById('fingers').value;
+                var count =1;
+                var gotIt = false;
+
+                while(gotIt == false){
+
+                    if (doAGuess(myNumber) == true){
+                        gotIt=true;
+                        alert("got it! It was a "+myNumber+ ". It took "+count+" guesses.");
+                    }
+                    else{
+                        count++;  
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

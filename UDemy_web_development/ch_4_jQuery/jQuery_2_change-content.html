@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="jquery-3.2.1.min.js"></script> 
+        <style type ="text/css">
+        
+            .sections{
+                width:100px;
+                height:100px;
+                margin:10px;
+                float:left;
+            }
+            #green-circle{
+                background-color:green;
+                border-radius:50%;
+            }
+            .red-square{
+                background-color:red;
+            }
+            #p1{
+                
+            }
+            #p2{
+
+            }
+        
+        </style>
+    </head>
+    <body>
+    
+        <div class ="sections" id="green-circle"></div>
+        
+        <p id ="p1">Here are some neat shapes</p>
+        
+        <iframe src ="http://www.cnn.com"></iframe>
+        
+        
+        <script type ="text/javascript">
+        
+            $('#green-circle').click(function(){
+                $("#p1").html("This is some new text");
+            });
+            
+           $('#green-circle').hover(function(){
+                $('iframe').attr("src", "https://www.ecowebhosting.co.uk");
+            });
+            
+            
+            
+        </script>
+    
+    </body>
+
+</html>

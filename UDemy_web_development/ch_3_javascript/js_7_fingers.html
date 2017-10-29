@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>How many fingers am I holding up</title>
+    </head>
+    <body>
+        
+        <p>How many fingers am I holding up?</p>
+        <input type ="text" id="input" placeholder ="fingers">
+        <buttons id ="myButton" style ="border:1px solid blue; border-radius:2px;">Enter</buttons>
+        
+        <script type ="text/javascript">
+            
+            document.getElementById('myButton').onclick = function(){
+                var rand = Math.floor((Math.random()*11));
+                var guess = document.getElementById('input').value;
+                if( guess == rand){
+                    alert("Congratulations! you guess right");
+                }
+                if (guess > rand){
+                    alert("Incorrect, your guess was high. \nThe number was "+ rand);
+                }
+                else{
+                    alert("Incorrect, your guess was low. \nThe number was "+ rand);
+                }
+            }
+            
+            
+        </script>
+    </body>
+</html>

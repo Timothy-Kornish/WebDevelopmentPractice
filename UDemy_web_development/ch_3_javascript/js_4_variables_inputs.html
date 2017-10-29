@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        
+        <input id ="textInput" type ="text" placeholder ="Enter your name">
+        <button id ="myButton">Change the text!</button>
+        <p id ="paragraphText">This is some text</p>
+        
+        <script type="text/javascript">
+        
+            document.getElementById('myButton').onclick = function(){
+                
+                var textEntered = "";
+                textEntered = document.getElementById('textInput').value;
+                document.getElementById('paragraphText').innerHTML = textEntered;
+                
+            };
+            
+        
+        </script>
+    
+    </body>
+</html>

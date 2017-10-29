@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Transformations</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        
+        <style type ="text/css">
+            div{
+                font-family:"arial";
+                text-align:center;
+                display:flex;
+                align-items:center;
+                justify-content: center;
+            }
+            #box{
+                width:100px;
+                height:100px;
+                color:white;
+                background-color:red;
+                border-radius:10px;
+                transition:1s ease-in-out;
+            }
+            #box:hover{
+                transform:translate(50px, 50px);
+            }
+            #box2{
+                width:100px;
+                height:100px;
+                color:white;
+                background-color:blue;
+                border-radius:10px;
+                transition:1s linear;
+            }
+            #box2:hover{
+                /* transform:translate(50px, 50px); */
+                /* transform:rotate(90deg); */
+                /* transform:scale(2,4); */
+                transform: skew(20deg,30deg);
+                
+            }
+            
+            /* 3d transformations */
+            
+            #box3{
+                width:100px;
+                height:100px;
+                color:white;
+                background-color:green;
+                border-radius:10px;
+                transition:1s linear;
+            }
+            
+            #box3:hover{
+                transform:rotateX(180deg);
+                transform:rotateZ(180deg);
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <div id="box">Box 1</div>
+        <div id ="box2">Box 2</div>
+        <div id ="box3">Box 3</div>
+    
+    </body>
+
+</html>

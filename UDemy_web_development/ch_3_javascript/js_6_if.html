@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset ="UTF-8"/>
+    </head>
+    <body>
+        <p>What is the magic word?</p>
+        <input type ="text" id ="input" placeholder ="magic word">
+        <button id ="myButton">Enter</button>
+        
+        
+        <script type ="text/javascript">
+            /*var x =2;
+            
+            if(x==1){
+                alert("x is 1");
+            } else{
+                alert("x is not 1");
+            }*/
+            var textEntered = "";
+            var magicWord = "abra kadabra";
+            
+            document.getElementById('myButton').onclick = function(){
+                textEntered = document.getElementById('input').value;
+                if (textEntered == magicWord){
+                    alert("Welcome");
+                } else{
+                    alert("Avada Kadabra");
+                }
+            }
+            
+            
+            
+        </script>
+    </body>
+</html>

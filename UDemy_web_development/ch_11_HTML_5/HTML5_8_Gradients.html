@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML 5 and CSS 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        
+        <style type="text/css">
+           
+            #gradient1{
+                width:500px;
+                height:200px;
+                background-color:blue;
+                background:linear-gradient(white,blue);
+            }
+            #gradient2{
+                width:500px;
+                height:200px;
+                background-color:blue;
+                background:linear-gradient(to bottom right,white,red,yellow,green);
+            }
+            #gradient3{
+                width:500px;
+                height:200px;
+                background-color:blue;
+                background:linear-gradient(to top left,white,blue);
+            }
+            #gradient4{
+                width:500px;
+                height:200px;
+                background-color:blue;
+                background:radial-gradient(white,violet);
+            }
+            #gradient5{
+                width:500px;
+                height:200px;
+                background:linear-gradient(to bottom left,green, yellow);
+            }
+            h4{
+                text-shadow:0px 0px 5px red;
+                font-size:200%;
+            }
+            h2{
+                text-shadow:2px 2px 4px green;
+                color:white
+            }
+            /* text-shadow: pixels to the right, pixels down, pixels of blur, color */
+            h3{
+                text-shadow: -2px -5px 4px blue;
+                
+            }
+            #shadows{
+                text-shadow:2px 2px 4px green, -5px -5px 4px yellow;
+            }
+            #shadow{
+                width:200px;
+                height:200px;
+                box-shadow:12px 12px 6px green;
+                background-color:antiquewhite;
+            }
+            
+        </style>
+        
+    </head>
+    
+    
+
+    
+    <body>
+        <h4>This text will glow</h4>
+        <h2>This text will have a shadow</h2>
+        <h3>This will also have a shadow</h3>
+        <p id ="shadows">This text is going crazy</p>
+        
+        <div id ="shadow"></div>
+        
+        
+        <div id ="gradient1"><h1>This is a gradient</h1></div>
+        <div id ="gradient2"><h1>This is another gradient</h1></div>
+        <div id ="gradient3"><h1>Here is a third gradient</h1></div>
+        <div id ="gradient4"><h1>Here is a Radial gradient</h1></div>
+        <div id ="gradient5"><h1>Here is a green gradient</h1></div>
+        
+        <script type="text/javascript">
+            
+            
+        </script>
+        
+    </body>
+</html>

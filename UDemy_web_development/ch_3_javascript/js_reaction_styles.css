@@ -1,0 +1,14 @@
+#shape{
+width:200px;
+height:200px;
+background-color:red;
+position:relative;
+clear:both;
+
+}
+body{
+font-family:sans-serif;
+}
+#bold {
+font-weight:bold;
+}

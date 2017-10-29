@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML 5 and CSS 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        
+        <style type="text/css">
+            
+            article{
+                background-color:lightgrey;
+                color:green;
+            }
+            
+            header, footer, article, section, nav, menu {
+                display:block;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <article>
+            I'm an article
+        
+        </article>
+        
+        <container>
+            I'm a container!
+        </container>
+        
+        <figure>
+        
+            <img src ="https://vignette3.wikia.nocookie.net/simpsons/images/6/6c/MaggieSimpson.PNG/revision/latest?cb=20170101014602" alt="Maggie Simpson" data-description="Baby" id ="baby">
+        
+            <figcaption>
+                <p><mark>Maggie Simpson</mark> <small>(Wikipedia)</small></p>
+            </figcaption>
+        </figure>
+        
+        <input type="range" min ="0" max ="100" step="10">
+        
+        <div contenteditable="true">
+            This is some editable text
+        </div>
+        <p>Babies Favorite Things</p>
+        <ul contenteditable="true">
+            <li>Milk</li>
+            <li>Binky</li>
+        </ul>
+        
+        <script type="text/javascript">
+            document.createElement("container");
+            
+            document.getElementById("baby").getAttribute("data-description");
+            
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML 5 and CSS 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        
+    </head>
+    <body>
+        <!-- autoplay in videos -->
+        <video width="320" height="240" controls id="video">
+        
+            <source src ="SampleVideo.mp4" type ="video/mp4">
+        </video>
+        
+        <button id="play">Play</button>
+        
+        
+        <audio controls id ="audio" autoplay>
+            <source src="SampleAudio.mp3" type="audio/mp3">
+        </audio>
+        
+        <button id ="playAudio">Play</button>
+        
+        
+        <script type="text/javascript">
+            
+            document.getElementById("play").onclick = function(){
+                if(document.getElementById("video").paused){
+                   document.getElementById("play").innerHTML = "Pause";
+                    document.getElementById("video").play();
+                   } else {
+                       document.getElementById("play").innerHTML = "Play";
+                       document.getElementById("video").pause();
+                   }
+               
+            }
+            
+            document.getElementById("playAudio").onclick = function(){
+                if(document.getElementById("audio").paused){
+                   document.getElementById("playAudio").innerHTML = "Pause";
+                    document.getElementById("audio").play();
+                   } else {
+                       document.getElementById("playAudio").innerHTML = "Play";
+                       document.getElementById("audio").pause();
+                   }
+               
+            }
+            
+        </script>
+        
+    </body>
+</html>

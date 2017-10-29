@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="jquery-3.2.1.min.js"></script> 
+        <script src ="jquery-ui-1.12.1/jquery-ui.js"></script>
+        <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+        
+        <style type ="text/css">
+        
+            .big-box{
+                width:200px;
+                height:200px;
+                margin:5px;
+                background-color:mediumpurple;
+                float:left;
+                z-index:4;
+            }
+            .box{
+                width:100px;
+                height:100px;
+                margin:5px;
+                float:left;
+                color:white;
+                padding:5px;
+            }
+            .small-box{
+                width:50px;
+                height:50px;
+                margin:5px;
+                background-color:darkgrey;
+                font-size:80%;
+                z-index:5;
+            }
+            #red{
+                background-color:red;
+                z-index=1;
+            }
+            #blue{
+                background-color:blue;
+                z-index=2;
+            }
+            #green{
+                background-color:green;
+                z-index:3;
+                
+            }
+            #also{
+                background-color:yellow !important;
+            }
+           
+        
+        </style>
+        
+    </head>
+    <body>
+        
+        <div class ="box" id ="red">drag me only up and down</div> 
+        <div class ="box" id ="blue">Drag me left and right</div>
+        <div class ="box" id ="green">Drag me anywhere</div>
+        
+        <div class="big-box" id="main">
+            <div class ="small-box" id = "confined">I'm confined</div>
+        </div>
+        <div class ="big-box" id ="also"></div>
+        
+        
+        
+        <script type ="text/javascript">
+            
+            $("#red").draggable({axis:"y"});
+            $("#blue").draggable({axis:"x"});
+            $("#green").draggable();
+            $(".big-box").resizable({
+                grid:50,
+                alsoResize:"#also",
+                resize:function (event,ui){
+                    
+                    if($(".big-box").width() >300){
+                        alert("woah, thats pretty big.");
+                    }
+                    
+                }
+            });
+            $("#also").resizable({
+                alsoResize:"#main"
+            });
+            $("#confined").draggable({containment: "parent"});
+        </script>
+    
+    </body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset ="UTF-8"/>
+    </head>
+    
+    <body>
+    
+        <script type ="text/javascript">
+            
+            var myArray = new Array();
+            myArray[0] = "pizza";
+            myArray[1] = "chocolate";
+            //alert(myArray[0]);
+            console.log(myArray);
+            
+            var tweets =["Morning", "I love Tea","Here we go again"];
+            alert(tweets[1]);
+            tweets.push("Water");
+            console.log(tweets);
+            
+            tweets.splice(1,1); // (delete starting at index 1, only one item)
+            tweets.splice(1,2);
+            tweets.splice(1,0,"Cornflakes for breakfast");// adds
+            tweets.splice(1,1,"cheerios are better"); // replaces
+        </script>
+    </body>
+</html>

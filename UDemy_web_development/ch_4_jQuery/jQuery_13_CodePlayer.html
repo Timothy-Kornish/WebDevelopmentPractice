@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        
+        <script src="jquery-3.2.1.min.js"></script> 
+        <script src ="jquery-ui-1.12.1/jquery-ui.js"></script>
+        <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+        
+        <style type ="text/css">
+        
+            .active{
+                background-color:#E8F2FF;
+            }
+            body{
+                font-family:sans-serif;
+                padding:0;
+                margin:0;
+                
+            }
+            #button-container{
+                width:233px;
+                margin:0 auto;
+            }
+            #header{
+                width:100%;
+                height:30px;
+                background-color:#EEEEEE;
+                padding:5px;
+                
+            }
+            .hidden{
+                display:none;
+            }
+            .highlighted-button{
+                background-color:grey;
+            }
+            #html{
+                border-top-left-radius:4px;
+                border-bottom-left-radius: 4px;
+            }
+            iframe{
+                border:none;
+            }
+            #logo{
+                float:left;
+                font-weight:bold;
+                font-size:120%;
+                padding:3px 5px;
+            }
+            #output{
+                border-top-right-radius:4px;
+                border-bottom-right-radius:4px;
+                border-right:1px solid grey !important;
+            }
+            .panel{
+                float:left;
+                width:50%;
+                border-left:none;
+            }
+            textarea{
+                width:50%;
+                resize:none;
+                border-top:none;
+                border-color:grey;
+            }
+            .toggle-button{
+                float:left;
+                border:1px solid grey;
+                padding:6px;
+                border-right:none;
+                font-size:90%;
+            }
+            
+           
+        
+        </style>
+        
+    </head>
+    <body>
+        
+        <div id ="header">
+        
+            <div id ="logo">CodePlayer</div>
+            
+            <div id ="button-container">
+            
+                <div class ="toggle-button active" id ="html">HTML</div>
+                <div class ="toggle-button" id ="css">CSS</div>
+                <div class ="toggle-button" id ="javascript">JavaScript</div>
+                <div class ="toggle-button active" id ="output">Output</div>
+            
+            </div>
+            
+        </div>
+        
+        <div id ="body-container">
+        
+            <textarea id ="html-panel" class ="panel">
+                <p id ="paragraph">Hello world!</p>
+            </textarea>
+            
+            <textarea id ="css-panel" class ="panel hidden">
+               p { color:green; }
+            </textarea>
+            
+            <textarea id ="javascript-panel" class ="panel hidden">
+               document.getElementById("paragraph").innerHTML ="Hello Timothy";
+            </textarea>
+            
+            
+            <iframe id ="output-panel" class ="panel"></iframe>
+        </div>
+        
+        <script type ="text/javascript">
+            
+            function updateOutput(){
+                $("iframe").contents().find("html").html("<html><head><style type ='text/css'>" + $("#css-panel").val() + "</style></head><body>" + $("#html-panel").val() +"</body></html>"); 
+                
+                document.getElementById("output-panel").contentWindow.eval($("#javascript-panel").val());
+                
+            }
+            
+            $(".toggle-button").hover(function(){
+                $(this).addClass("highlighted-button");
+            }, function(){
+                $(this).removeClass("highlighted-button");
+            });
+            
+            $(".toggle-button").click(function(){
+                $(this).toggleClass('active');  
+                $(this).removeClass("highlighted-button");
+                
+                var panelId = $(this).attr("id")+"-panel";
+                
+                $("#"+panelId).toggleClass("hidden");
+                
+                var activePanels =4 -$(".hidden").length;
+                
+                $(".panel").width(($(window).width() /activePanels)-10);
+            });
+            
+            $(".panel").height($(window).height() - $("#header").height() -15);
+            
+            $(".panel").width(($(window).width() /2)-15);
+            
+            $("iframe").contents().find("html").html($("#html-panel").val());
+            
+            updateOutput();
+            
+            $("textarea").on("change keyup paste", function (){
+               updateOutput(); 
+            });
+            
+            
+        </script>
+    
+    </body>
+
+</html>

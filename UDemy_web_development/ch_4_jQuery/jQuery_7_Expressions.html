@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="jquery-3.2.1.min.js"></script> 
+        
+    </head>
+    <body>
+        
+        <script type ="text/javascript">
+            
+            var regex = /is/;
+            var regex2 =/isnot/;
+            var regex3 =/Great/i;
+           
+            var string ="This program is greaT";
+            
+            var result =string.match(regex);
+            var result2 = string.match(regex2);
+            var result3 = string.match(regex3);
+            // returns what is in the string
+            
+            alert(result);
+            alert(result2);
+            alert(result3);
+            
+            var regex4 = /e/g;
+            var result4 = string.match(regex4);
+            alert(result4);
+            
+        </script>
+    
+    </body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="jquery-3.2.1.min.js"></script> 
+        <style type ="text/css">
+        
+            .sections{
+                width:100px;
+                height:100px;
+                margin:10px;
+                float:left;
+            }
+            #green-circle{
+                background-color:green;
+                border-radius:50%;
+            }
+            .red-square{
+                background-color:red;
+            }
+        
+        </style>
+    </head>
+    <body>
+    
+        <div class ="sections" id="green-circle"></div>
+        <div class ="sections red-square"></div>
+        <div class="sections red-square"></div>
+        <p>Here are some neat shapes</p>
+        
+        
+        <script type ="text/javascript">
+        
+            $('#green-circle').click(function(){
+                alert('cirlce was clicked');
+            });
+            $('.red-square').click(function(){
+                alert('a square was clicked'); 
+            });
+            $('p').click(function(){
+                alert("a pargraph was clicked");
+            });
+            /*
+            testing to see if jquery is present
+            
+            if(typeof jQuery == "undefined"){
+                console.log("jQuery is not working");
+            } else {
+                console.log("jQuery is working");
+            }
+            */
+        </script>
+    
+    </body>
+
+</html>

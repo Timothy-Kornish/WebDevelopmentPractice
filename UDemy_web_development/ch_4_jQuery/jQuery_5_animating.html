@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="jquery-3.2.1.min.js"></script> 
+        <style type ="text/css">
+        
+            .sections{
+                width:100px;
+                height:100px;
+                margin:10px;
+                float:left;
+            }
+            #green-circle{
+                background-color:green;
+                border-radius:50%;
+            }
+            .red-square{
+                background-color:red;
+            }
+            #p1{
+                display:block;
+            }
+            #p2{
+                clear:both;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class ="sections" id="green-circle"></div>
+
+        <script type ="text/javascript">
+        
+            $("#green-circle").click(function(){
+                $(this).animate({
+                    width:"400px",
+                    height:"400px",
+                    marginLeft:"200px",
+                    marginTop:"100px"
+                },2000, function(){
+                    $(this).css("background-color","red");
+                });
+            });
+
+        </script>
+    
+    </body>
+
+</html>
